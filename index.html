@@ -1,182 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VITRINE MTZX7</title>
+  <meta charset="UTF-8">
+  <title>VITRINE MTZX7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-        body {
-            background: linear-gradient(135deg, #0a0a0a, #111827);
-            color: #fff;
-            min-height: 100vh;
-        }
+    body {
+      background: linear-gradient(135deg, #0a0a0a, #10182f);
+      color: #fff;
+    }
 
-        header {
-            padding: 25px 50px;
-            background: rgba(0,0,0,0.6);
-            border-bottom: 2px solid #00ff88;
-        }
+    header {
+      padding: 30px;
+      text-align: center;
+      background: rgba(0,0,0,0.7);
+      border-bottom: 2px solid #00ff88;
+    }
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #00ff88;
-            text-shadow: 0 0 10px #00ff88;
-        }
+    header h1 {
+      font-size: 42px;
+      color: #00ff88;
+      text-shadow: 0 0 15px #00ff88;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-        }
+    header p {
+      color: #aaa;
+      margin-top: 10px;
+    }
 
-        .hero h1 {
-            font-size: 46px;
-            margin-bottom: 15px;
-            color: #00ff88;
-        }
+    section {
+      padding: 80px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-        .hero p {
-            color: #aaa;
-            font-size: 18px;
-        }
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      color: #00ff88;
+      margin-bottom: 60px;
+    }
 
-        .bots {
-            padding: 80px 50px;
-            max-width: 1200px;
-            margin: auto;
-        }
+    .bots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
 
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 50px;
-            color: #00ff88;
-        }
+    .bot-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid #00ff88;
+      border-radius: 12px;
+      padding: 30px;
+      transition: 0.3s;
+    }
 
-        .bots-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
+    .bot-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,255,136,0.3);
+    }
 
-        .bot-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid #00ff88;
-            border-radius: 12px;
-            padding: 30px;
-            transition: 0.3s;
-        }
+    .bot-card h3 {
+      color: #00ff88;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
 
-        .bot-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,255,136,0.3);
-        }
+    .bot-card p {
+      color: #ccc;
+      line-height: 1.5;
+    }
 
-        .bot-card h3 {
-            color: #00ff88;
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .bot-card p {
-            color: #ccc;
-            font-size: 15px;
-            line-height: 1.5;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #000;
-            color: #666;
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      color: #666;
+      margin-top: 80px;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">⚡ VITRINE MTZX7</div>
-</header>
+  <!-- NOTIFICAÇÃO NO DISCORD (FUNCIONA NO GITHUB PAGES) -->
+  <img
+    src="https://eo8v3vbgytcim1s.m.pipedream.net/?site=VITRINE_MTZX7&evento=visita&origem=github_pages"
+    style="display:none"
+  />
 
-<section class="hero">
-    <h1>Meus Bots Discord</h1>
-    <p>Projetos desenvolvidos por MTZX7</p>
-</section>
+  <header>
+    <h1>⚡ VITRINE MTZX7</h1>
+    <p>Meus bots, automações e projetos Discord</p>
+  </header>
 
-<section class="bots">
-    <h2 class="section-title">🤖 Bots MTZX7</h2>
+  <section>
+    <h2 class="section-title">🤖 Bots Criados</h2>
 
     <div class="bots-grid">
 
-        <div class="bot-card">
-            <h3>MTZX7 Vendas</h3>
-            <p>Bot de vendas com carrinho, pagamentos automáticos e entrega instantânea.</p>
-        </div>
+      <div class="bot-card">
+        <h3>MTZX7 Bot de Vendas</h3>
+        <p>
+          Sistema completo de vendas com produtos, Pix,
+          confirmação automática, envio em DM e logs.
+        </p>
+      </div>
 
-        <div class="bot-card">
-            <h3>MTZX7 Tickets</h3>
-            <p>Sistema de tickets com painel, categorias e logs automáticos.</p>
-        </div>
+      <div class="bot-card">
+        <h3>MTZX7 Bot de Tickets</h3>
+        <p>
+          Tickets privados, categorias automáticas,
+          fechamento com log e painel administrativo.
+        </p>
+      </div>
 
-        <div class="bot-card">
-            <h3>MTZX7 Formulários</h3>
-            <p>Formulários interativos com envio direto para canais privados.</p>
-        </div>
+      <div class="bot-card">
+        <h3>MTZX7 Bot de Formulários</h3>
+        <p>
+          Formulários via slash command, modais,
+          envio direto para canais específicos.
+        </p>
+      </div>
 
-        <div class="bot-card">
-            <h3>MTZX7 Moderação</h3>
-            <p>Comandos de moderação, automod e proteção contra raids.</p>
-        </div>
+      <div class="bot-card">
+        <h3>MTZX7 Bot de Moderação</h3>
+        <p>
+          Ban, kick, mute, warn, logs completos
+          e comandos slash modernos.
+        </p>
+      </div>
 
-        <div class="bot-card">
-            <h3>MTZX7 Apostas</h3>
-            <p>Sistema de apostas, saldo virtual e ranking automático.</p>
-        </div>
+      <div class="bot-card">
+        <h3>MTZX7 Bot de Apostas</h3>
+        <p>
+          Sistema de apostas, saldo, ranking
+          e controle total via Discord.
+        </p>
+      </div>
 
-        <div class="bot-card">
-            <h3>MTZX7 Status</h3>
-            <p>Mostra status de servidores Discord em tempo real.</p>
-        </div>
+      <div class="bot-card">
+        <h3>MTZX7 Bot Status de Servidor</h3>
+        <p>
+          Mostra status de servidores Discord,
+          online/offline e informações básicas.
+        </p>
+      </div>
 
     </div>
-</section>
+  </section>
 
-<footer>
-    © 2025 VITRINE MTZX7 — Todos os direitos reservados
-</footer>
-
-<!-- 🔔 NOTIFICAÇÃO DISCORD (SÓ GITHUB PAGES) -->
-<script>
-(function () {
-
-    const SITE_OFICIAL = "https://mtzx7.github.io/MTZX7-SITE-ONLINE/";
-    const PIPEDREAM_URL = "https://eo8v3vbgytcim1s.m.pipedream.net";
-
-    if (location.href.startsWith(SITE_OFICIAL)) {
-        fetch(PIPEDREAM_URL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                url: location.href,
-                userAgent: navigator.userAgent,
-                referrer: document.referrer || "Direto",
-                time: new Date().toISOString()
-            })
-        });
-    }
-
-})();
-</script>
+  <footer>
+    <p>© 2025 MTZX7 — Todos os direitos reservados</p>
+  </footer>
 
 </body>
 </html>
