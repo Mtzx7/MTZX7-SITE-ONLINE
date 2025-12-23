@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTZX7 HUB - Scripts Premium</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .bg-animation {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.12;
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                #00ff88 2px,
+                #00ff88 4px
+            );
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(60px); }
+        }
+
+        header {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #00ff88;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00ff88;
+            text-shadow: 0 0 12px #00ff88;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00ff88;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 110px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px #00ff88;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #aaa;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #888;
+        }
+
+        .scripts {
+            padding: 90px 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #00ff88;
+        }
+
+        .scripts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+
+        .script-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid #00ff88;
+            border-radius: 12px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .script-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,255,136,0.35);
+        }
+
+        .script-card h3 {
+            font-size: 24px;
+            color: #00ff88;
+            margin-bottom: 15px;
+        }
+
+        .script-card p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .features li {
+            color: #aaa;
+            padding: 5px 0;
+        }
+
+        .features li::before {
+            content: "✓ ";
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #00ff88, #00cc6a);
+            color: #000;
+            padding: 12px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.07);
+        }
+
+        .contact {
+            padding: 90px 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.35);
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            color: #00ff88;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            color: #aaa;
+        }
+
+        .contact-links {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            padding: 15px 40px;
+            border: 2px solid #00ff88;
+            border-radius: 6px;
+            color: #00ff88;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #00ff88;
+            color: #000;
+        }
+
+        footer {
+            background: #000;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-animation"></div>
+
+<header>
+    <div class="logo">⚡ MTZX7 HUB</div>
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#scripts">Scripts</a>
+        <a href="#vitrine">Vitrine</a>
+        <a href="#contact">Contato</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>MTZX7 HUB — Scripts Lua Premium</h1>
+    <p>Os melhores scripts, hubs e automações para seus jogos</p>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Clientes</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Scripts</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">79%</div>
+            <div class="stat-label">Aprovação</div>
+        </div>
+    </div>
+</section>
+
+<section class="scripts" id="scripts">
+    <h2 class="section-title">🔥 Scripts em Destaque</h2>
+
+    <div class="scripts-grid">
+
+        <div class="script-card">
+            <h3>MTZX7 PVP</h3>
+            <p>Hub completo com diversas funções como esp hitbox speed boost e muito mais.</p>
+            <div class="price">R$ 4,99</div>
+            <ul class="features">
+                <li>Hitbox</li>
+                <li>speed boost configuravel</li>
+                <li>Anti-Ban</li>
+                <li>Atualizações constantes</li>
+                <li>Para steal a brainrot</li>
+            </ul>
+            <a href="#contact" class="btn">Comprar Agora</a>
+        </div>
+
+        <div class="script-card">
+            <h3>Auto Farm Ultimate</h3>
+            <p>Farm automático inteligente compatível com vários jogos.</p>
+            <div class="price">R$ 15,00</div>
+            <ul class="features">
+                <li>Auto Quest</li>
+                <li>Auto Boss</li>
+                <li>Farm AFK</li>
+                <li>Configurações avançadas</li>
+            </ul>
+            <a href="#contact" class="btn">Comprar Agora</a>
+        </div>
+
+        <div class="script-card">
+            <h3>Combat Pro</h3>
+            <p>Script focado em PvP, combos e defesa perfeita.</p>
+            <div class="price">R$ 30,00</div>
+            <ul class="features">
+                <li>Kill Aura</li>
+                <li>Auto Dodge</li>
+                <li>Combo System</li>
+                <li>Alta performance</li>
+            </ul>
+            <a href="#contact" class="btn">Comprar Agora</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- VITRINE MTZX7 - Meus Bots -->
+<section class="scripts" id="vitrine">
+    <h2 class="section-title">💎 Vitrine MTZX7 — Meus Bots</h2>
+
+    <div class="scripts-grid">
+        <div class="script-card">
+            <h3>MTZX7 Bot de Vendas</h3>
+            <p>Bot de vendas, entrega automática de produtos e gestão de pedidos via Discord.</p>
+            <a href="#contact" class="btn">Ver Mais</a>
+        </div>
+
+        <div class="script-card">
+            <h3>MTZX7 Bot de Tickets</h3>
+            <p>Gerencia tickets e formulários, perfeito para suporte ao usuário.</p>
+            <a href="#contact" class="btn">Ver Mais</a>
+        </div>
+
+        <div class="script-card">
+            <h3>MTZX7 Bot de Moderação</h3>
+            <p>Automatiza regras do servidor, muta, bane e mantém a ordem.</p>
+            <a href="#contact" class="btn">Ver Mais</a>
+        </div>
+
+        <div class="script-card">
+            <h3>MTZX7 Bot de Apostas</h3>
+            <p>Permite apostas entre usuários, minigames e economia divertida.</p>
+            <a href="#contact" class="btn">Ver Mais</a>
+        </div>
+
+        <div class="script-card">
+            <h3>MTZX7 Bot de Status de SV</h3>
+            <p>Monitora status de servidores e mostra informações importantes do Discord.</p>
+            <a href="#contact" class="btn">Ver Mais</a>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Entre em Contato</h2>
+    <p>Entre agora no MTZX7 HUB e domine qualquer jogo.</p>
+
+    <div class="contact-links">
+        <a href="https://discord.gg/uPZynEu5" target="_blank" class="contact-btn">💬 Discord</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 MTZX7 HUB — Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
