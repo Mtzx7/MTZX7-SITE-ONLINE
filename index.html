@@ -2,119 +2,145 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>MTZX7 HUB</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VITRINE MTZX7 — Bots & Scripts Profissionais</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',system-ui,sans-serif;
 }
-
-body {
-  background: linear-gradient(135deg, #050505, #0f172a);
-  color: #fff;
-  overflow-x: hidden;
+body{
+    background:radial-gradient(circle at top,#0f2027,#000);
+    color:#fff;
 }
+a{text-decoration:none;color:inherit}
 
 /* HEADER */
-header {
-  padding: 25px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0,0,0,0.6);
-  border-bottom: 2px solid #00ff88;
+header{
+    background:rgba(0,0,0,.8);
+    border-bottom:2px solid #00ff88;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
-
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #00ff88;
-  text-shadow: 0 0 12px #00ff88;
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:#00ff88;
+    text-shadow:0 0 15px #00ff88;
 }
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 30px;
+nav a{
+    margin-left:30px;
+    transition:.3s;
 }
-
-nav a:hover {
-  color: #00ff88;
-}
+nav a:hover{color:#00ff88}
 
 /* HERO */
-.hero {
-  text-align: center;
-  padding: 120px 20px;
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
+.hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+    text-shadow:0 0 25px #00ff88;
+}
+.hero p{
+    font-size:20px;
+    color:#bbb;
 }
 
-.hero h1 {
-  font-size: 48px;
-  color: #00ff88;
-  text-shadow: 0 0 20px #00ff88;
+/* SECTIONS */
+section{
+    padding:100px 50px;
+    max-width:1300px;
+    margin:auto;
 }
-
-.hero p {
-  color: #aaa;
-  margin-top: 15px;
-  font-size: 20px;
-}
-
-/* SECTION */
-section {
-  padding: 100px 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  color: #00ff88;
-  margin-bottom: 60px;
+.section-title{
+    text-align:center;
+    font-size:40px;
+    color:#00ff88;
+    margin-bottom:70px;
 }
 
 /* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 35px;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
 }
 
 /* CARD */
-.card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid #00ff88;
-  border-radius: 14px;
-  padding: 30px;
-  transition: 0.3s;
+.card{
+    background:rgba(255,255,255,.05);
+    border:1px solid #00ff88;
+    border-radius:16px;
+    padding:35px;
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+}
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg,transparent,#00ff88,transparent);
+    opacity:.05;
+}
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 50px rgba(0,255,136,.35);
+}
+.card h3{
+    font-size:26px;
+    color:#00ff88;
+    margin-bottom:15px;
+}
+.card p{
+    color:#ccc;
+    margin-bottom:25px;
+}
+.badge{
+    display:inline-block;
+    background:#00ff88;
+    color:#000;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+.btn{
+    display:inline-block;
+    padding:14px 38px;
+    background:linear-gradient(45deg,#00ff88,#00cc6a);
+    color:#000;
+    font-weight:800;
+    border-radius:8px;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,255,136,0.35);
+/* SOBRE */
+.about{
+    text-align:center;
 }
-
-.card h3 {
-  color: #00ff88;
-  margin-bottom: 15px;
-}
-
-.card p {
-  color: #ccc;
-  line-height: 1.5;
+.about p{
+    max-width:900px;
+    margin:auto;
+    font-size:20px;
+    color:#bbb;
 }
 
 /* FOOTER */
-footer {
-  background: #000;
-  padding: 30px;
-  text-align: center;
-  color: #666;
+footer{
+    background:#000;
+    padding:40px;
+    text-align:center;
+    color:#666;
+    border-top:2px solid #00ff88;
 }
 </style>
 </head>
@@ -122,89 +148,100 @@ footer {
 <body>
 
 <header>
-  <div class="logo">⚡ MTZX7 HUB</div>
-  <nav>
-    <a href="#home">Início</a>
-    <a href="#bots">Bots</a>
-    <a href="#contato">Contato</a>
-  </nav>
+<div class="logo">⚡ SITE MTZX7</div>
+<nav>
+<a href="#home">Início</a>
+<a href="#bots">Bots</a>
+<a href="#scripts">Scripts</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</nav>
 </header>
 
 <section class="hero" id="home">
-  <h1>MTZX7 HUB</h1>
-  <p>Vitrine oficial dos meus bots e projetos Discord</p>
+<h1>MTZX7 — Bots & Scripts Profissionais</h1>
+<p>Soluções completas em Discord Bots, automações e sistemas digitais</p>
 </section>
 
 <section id="bots">
-  <h2 class="section-title">🤖 Bots MTZX7</h2>
+<h2 class="section-title">🤖 Bots Desenvolvidos</h2>
+<div class="grid">
 
-  <div class="grid">
-    <div class="card">
-      <h3>MTZX7 Bot de Vendas</h3>
-      <p>Sistema completo de vendas com produtos, Pix, confirmação e envio automático em DM.</p>
-    </div>
+<div class="card">
+<span class="badge">Mais Vendido</span>
+<h3>MTZX7 Bot de Vendas</h3>
+<p>Pagamentos automáticos, entrega instantânea, sistema profissional.</p>
+<a class="btn">Ver Bot</a>
+</div>
 
-    <div class="card">
-      <h3>MTZX7 Bot de Tickets</h3>
-      <p>Tickets privados, categorias automáticas e fechamento com logs.</p>
-    </div>
+<div class="card">
+<span class="badge">Premium</span>
+<h3>MTZX7 Ticket System</h3>
+<p>Tickets organizados, painel administrativo e logs completos.</p>
+<a class="btn">Ver Bot</a>
+</div>
 
-    <div class="card">
-      <h3>MTZX7 Bot de Formulários</h3>
-      <p>Formulários via modal com envio direto para canais específicos.</p>
-    </div>
+<div class="card">
+<span class="badge">Estável</span>
+<h3>MTZX7 Moderação</h3>
+<p>Proteção total do servidor, anti-spam, punições automáticas.</p>
+<a class="btn">Ver Bot</a>
+</div>
 
-    <div class="card">
-      <h3>MTZX7 Bot de Moderação</h3>
-      <p>Ban, kick, mute, warn e sistema completo de logs.</p>
-    </div>
+<div class="card">
+<span class="badge">Novo</span>
+<h3>MTZX7 Status Server</h3>
+<p>Status em tempo real de servidores Discord e serviços.</p>
+<a class="btn">Ver Bot</a>
+</div>
 
-    <div class="card">
-      <h3>MTZX7 Bot de Apostas</h3>
-      <p>Sistema de apostas, ranking, saldo e controle administrativo.</p>
-    </div>
-
-    <div class="card">
-      <h3>MTZX7 Bot Status de Servidor</h3>
-      <p>Status de servidores Discord com informações básicas.</p>
-    </div>
-  </div>
+</div>
 </section>
 
-<section id="contato">
-  <h2 class="section-title">📞 Contato</h2>
-  <div style="text-align:center;">
-    <a href="https://discord.gg/uPZynEu5" target="_blank" style="
-      padding: 15px 40px;
-      border: 2px solid #00ff88;
-      color: #00ff88;
-      text-decoration: none;
-      border-radius: 6px;
-    ">Entrar no Discord</a>
-  </div>
+<section id="scripts">
+<h2 class="section-title">🔥 Scripts em Destaque</h2>
+<div class="grid">
+
+<div class="card">
+<h3>MTZX7 PVP</h3>
+<p>Hub avançado com funções exclusivas e atualizações constantes.</p>
+<a class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<h3>Auto Farm Ultimate</h3>
+<p>Farm automático inteligente compatível com vários jogos.</p>
+<a class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<h3>Combat Pro</h3>
+<p>Script focado em PvP competitivo e alta performance.</p>
+<a class="btn">Comprar</a>
+</div>
+
+</div>
+</section>
+
+<section class="about" id="sobre">
+<h2 class="section-title">📌 Quem Somos</h2>
+<p>
+A MTZX7 é especializada no desenvolvimento de bots Discord profissionais,
+scripts premium e soluções digitais. Nosso foco é estabilidade, segurança
+e performance real para servidores e clientes exigentes.
+</p>
+</section>
+
+<section class="about" id="contato">
+<h2 class="section-title">💬 Contato</h2>
+<p>Entre em nosso Discord oficial para suporte, compras e parcerias.</p>
+<br>
+<a href="https://discord.gg/uPZynEu5" target="_blank" class="btn">Entrar no Discord</a>
 </section>
 
 <footer>
-  © 2025 MTZX7 HUB — Todos os direitos reservados
+© 2025 MTZX7 — Todos os direitos reservados
 </footer>
-
-<!-- NOTIFICAÇÃO DISCORD (GITHUB PAGES) -->
-<script>
-setTimeout(() => {
-  fetch("https://eo8v3vbgytcim1s.m.pipedream.net/", {
-    method: "POST",
-    mode: "no-cors",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      site: "MTZX7_HUB",
-      evento: "visita",
-      origem: "github_pages",
-      url: location.href,
-      navegador: navigator.userAgent
-    })
-  });
-}, 1200);
-</script>
 
 </body>
 </html>
